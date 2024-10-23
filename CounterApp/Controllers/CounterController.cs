@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CounterApp.Controllers
 {
@@ -6,7 +6,14 @@ namespace CounterApp.Controllers
     [ApiController]
     public class CounterController : ControllerBase
     {
+        
+        public CounterController() {}
 
+        [HttpGet]
+        public ActionResult Increment()
+        {
+            return counter++;
+        }
 
 
 
